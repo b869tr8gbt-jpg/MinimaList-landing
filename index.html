@@ -1,37 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IP Risk Checker</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            width: 400px !important;
-            height: 450px;
-            margin: 0;
-            padding: 0;
-            font-family: "Inter", sans-serif;
-            box-sizing: border-box;
-            border-color: None;
-        }
-        
-        .inter {
-            font-family: "Inter", sans-serif !important;
-            font-optical-sizing: auto;
-        }
-        
-        #content {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-    <script defer src="script.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MinimaList | Vetted Amazon Arbitrage Lists</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fafaf8;--surface:#fff;--text:#111;--muted:#6b6b66;--line:#e8e8e3;--accent:#0f7b4f;--accent-text:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0e0d;--surface:#161615;--text:#f2f2ee;--muted:#9a9a93;--line:#262624;--accent:#3ecf8e;--accent-text:#06210f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e0e0d;--surface:#161615;--text:#f2f2ee;--muted:#9a9a93;--line:#262624;--accent:#3ecf8e;--accent-text:#06210f;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
+.logo{font-weight:700;letter-spacing:-.02em;font-size:18px}
+.logo span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;font-size:14px}
+nav a:hover{color:var(--text)}
+.hero{padding:72px 0 72px;text-align:center}
+.art{display:block;margin:0 auto 28px;color:var(--text)}
+.mark{vertical-align:-4px;margin-right:6px;color:var(--text)}
+.tag{display:inline-block;font-size:13px;color:var(--muted);border:1px solid var(--line);padding:4px 12px;border-radius:99px;margin-bottom:24px}
+h1{font-size:clamp(36px,6vw,60px);line-height:1.08;letter-spacing:-.035em;font-weight:700;max-width:720px;margin:0 auto 20px}
+.sub{color:var(--muted);font-size:18px;max-width:520px;margin:0 auto 36px}
+form{display:flex;gap:8px;max-width:440px;margin:0 auto;flex-wrap:wrap}
+input[type=email]{flex:1 1 220px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--text);font:inherit;font-size:15px;outline:none}
+input[type=email]:focus{border-color:var(--accent)}
+button{padding:14px 22px;border:0;border-radius:10px;background:var(--accent);color:var(--accent-text);font:inherit;font-weight:600;font-size:15px;cursor:pointer}
+button:hover{opacity:.9}
+.note{font-size:13px;color:var(--muted);margin-top:14px;min-height:20px}
+.ok{color:var(--accent);font-weight:500}
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-size:28px;letter-spacing:-.025em;margin-bottom:8px}
+.lead{color:var(--muted);margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.num{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:12px}
+.card h3{font-size:17px;margin-bottom:6px;letter-spacing:-.01em}
+.card p{color:var(--muted);font-size:15px}
+.cta{text-align:center}
+.cta .lead{margin-bottom:28px}
+footer{padding:32px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+</style>
 </head>
 <body>
-    <div id="content"></div>
+<div class="wrap">
+  <nav>
+    <div class="logo"><svg class="mark" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="15" rx="3"/><path d="M12 6v5"/><path d="M7 15q5 3.5 10 0" stroke="var(--accent)"/></svg>Minima<span>List</span></div>
+    <a href="#join">Get the list</a>
+  </nav>
+
+  <header class="hero">
+    <svg class="art" viewBox="0 0 160 96" width="160" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Package with a rising profit line"><rect x="8" y="24" width="56" height="56" rx="10" fill="var(--surface)"/><path d="M36 24v16"/><path d="M22 58q14 10 28 0M46 55l4 3-4 4"/><path d="M80 74l20-18 14 10 30-36" stroke="var(--accent)"/><path d="M134 30h10v10" stroke="var(--accent)"/></svg>
+    <div class="tag">Fresh Amazon arbitrage leads</div>
+    <h1>Profitable products, already vetted.</h1>
+    <p class="sub">Skip the hours of scanning. Get curated online arbitrage leads delivered to your inbox, ready to review and buy.</p>
+    <form class="signup" novalidate>
+      <input type="email" placeholder="you@email.com" aria-label="Email address" required>
+      <button type="submit">Get free sample</button>
+    </form>
+    <p class="note">Free sample list. No spam, unsubscribe anytime.</p>
+  </header>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="lead">Three simple steps from sign-up to your first buy.</p>
+    <div class="grid">
+      <div class="card"><div class="num">01</div><h3>Join the list</h3><p>Enter your email and receive a free sample list right away.</p></div>
+      <div class="card"><div class="num">02</div><h3>Review the leads</h3><p>Each lead includes the source link, Amazon link, cost, and sell price.</p></div>
+      <div class="card"><div class="num">03</div><h3>Buy and sell</h3><p>Pick what fits your budget and ship it to Amazon, FBA or FBM.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What’s in every list</h2>
+    <p class="lead">Built to save you time and cut down on risky buys.</p>
+    <div class="grid">
+      <div class="card"><h3>Manually vetted</h3><p>Every product is checked by a person, not just a scanner.</p></div>
+      <div class="card"><h3>Clear profit data</h3><p>Fees, ROI, and sales rank are laid out so you can decide fast.</p></div>
+      <div class="card"><h3>Sell-ability checks</h3><p>Gating, restrictions, and competition are reviewed before a lead is listed.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="join">
+  <div class="wrap cta">
+    <h2>Get your first list free</h2>
+    <p class="lead">Join the email list and see the quality for yourself.</p>
+    <form class="signup" novalidate>
+      <input type="email" placeholder="you@email.com" aria-label="Email address" required>
+      <button type="submit">Send me the sample</button>
+    </form>
+    <p class="note">We respect your inbox.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer>
+    <span>&copy; 2026 MinimaList</span>
+    <span>Not affiliated with Amazon. Profits are not guaranteed.</span>
+  </footer>
+</div>
+
+<script>
+document.querySelectorAll('form.signup').forEach(function(f){
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var input=f.querySelector('input'),note=f.nextElementSibling;
+    var ok=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
+    note.className='note'+(ok?' ok':'');
+    note.textContent=ok?'Thanks! Check your inbox soon.':'Please enter a valid email address.';
+    if(ok)input.value='';
+  });
+});
+</script>
 </body>
 </html>
-
